@@ -1,0 +1,20 @@
+<head>
+  <title>i18n-test</title>
+</head>
+
+<body>
+  <h1>{{_'Welcome to Meteor!'}}</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{> i18n_buttons}}
+  {{> i18n_dropdown}}
+  {{i18n_currentLanguage.name}} - {{i18n_currentLanguage.en}}
+  {{i18n_isCurrentLanguage 'tag'}}
+  <p>{{_"You can't use this"}} {{_"camelCase"}} {{_"camelcase"}}</p>
+  {{#each persons}}
+    <p>{{name}}, {{country}}</p>
+  {{/each}}
+</template>
